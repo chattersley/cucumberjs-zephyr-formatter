@@ -73,6 +73,7 @@
     "codecov": "^3.1.0",
     "cucumber": "^5.1.0",
     "cz-conventional-changelog": "^2.1.0",
+    "event-stream": "^4.0.1",
     "expect": "^24.1.0",
     "fs": "0.0.1-security",
     "gh-pages": "^2.0.0",
