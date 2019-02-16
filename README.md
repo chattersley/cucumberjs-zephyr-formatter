@@ -7,7 +7,7 @@ The library is designed to have the *reporter_development_version* set and not t
 Example of how to tag the Zephyr tests can be found in the *__component-tests__* folder. The example project was *CUC*.
 
 ## Mandatory elements
-'''
+```
 reporter_username=
 reporter_password=
 reporter_host=
@@ -15,11 +15,12 @@ reporter_port=
 reporter_protocol= (http or https)
 reporter_development_version=
 reporter_prefix=
-'''
+```
+
 ## Optional elements
-'''
+```
 reporter_execution= (default -1)
 reporter_cycle= (default 'Ad hoc'),
 reporter_version= (default 'Unscheduled'),
 reporter_development_version
-'''
+```
