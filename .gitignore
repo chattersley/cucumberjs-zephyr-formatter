@@ -1,0 +1,13 @@
+node_modules
+build
+test
+reports
+src/**.js
+.idea/*
+
+coverage
+.nyc_output
+*.log
+
+yarn.lock
+.env

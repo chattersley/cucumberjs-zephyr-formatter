@@ -1,0 +1,14 @@
+{
+  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "rules": {
+    "interface-name": [true, "never-prefix"],
+    "no-implicit-dependencies": [true, "dev"],
+
+    "no-var-keyword": true,
+    "no-parameter-reassignment": true,
+    "typedef": [true, "call-signature"],
+    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"],
+    "max-classes-per-file": [true, 5, "exclude-class-expressions"],
+    "object-literal-sort-keys": false
+  }
+}

@@ -1,0 +1,42 @@
+{
+   "stepBeanCollection": [{
+         "id": 5,
+         "orderId": 1,
+         "step": "Given the following animals: {strings}",
+         "data": "cow",
+         "result": "",
+         "createdBy": "chattersley",
+         "modifiedBy": "chattersley",
+         "htmlStep": "<p>Given the following animals: <\/p>\n{strings}",
+         "htmlData": "<p>cow<\/p>",
+         "htmlResult": "",
+         "attachmentsMap": []
+      },
+      {
+         "id": 8,
+         "orderId": 2,
+         "step": "When I'm happy",
+         "data": "",
+         "result": "",
+         "createdBy": "chattersley",
+         "modifiedBy": "chattersley",
+         "htmlStep": "<p>When I'm happy<\/p>",
+         "htmlData": "",
+         "htmlResult": "",
+         "attachmentsMap": []
+      },
+      {
+         "id": 9,
+         "orderId": 3,
+         "step": "Then moo",
+         "data": "",
+         "result": "",
+         "createdBy": "chattersley",
+         "modifiedBy": "chattersley",
+         "htmlStep": "<p>Then moo<\/p>",
+         "htmlData": "",
+         "htmlResult": "",
+         "attachmentsMap": []
+      }
+   ]
+}

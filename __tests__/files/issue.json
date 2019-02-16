@@ -1,0 +1,138 @@
+{
+    "expand": "renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations",
+    "id": "10100",
+    "self": "http://localhost:8089/rest/api/2/issue/10100",
+    "key": "CUC-2",
+    "fields":    {
+       "issuetype":       {
+          "self": "http://localhost:8089/rest/api/2/issuetype/10100",
+          "id": "10100",
+          "description": "This Issue Type is used to create Zephyr Test within Jira.",
+          "iconUrl": "http://localhost:8089/download/resources/com.thed.zephyr.je/images/icons/ico_zephyr_issuetype.png",
+          "name": "Test",
+          "subtask": false
+       },
+       "components": [],
+       "timespent": null,
+       "timeoriginalestimate": null,
+       "description": null,
+       "project":       {
+          "self": "http://localhost:8089/rest/api/2/project/10000",
+          "id": "10000",
+          "key": "CUC",
+          "name": "Cucumber",
+          "avatarUrls":          {
+             "48x48": "http://localhost:8089/secure/projectavatar?avatarId=10324",
+             "24x24": "http://localhost:8089/secure/projectavatar?size=small&avatarId=10324",
+             "16x16": "http://localhost:8089/secure/projectavatar?size=xsmall&avatarId=10324",
+             "32x32": "http://localhost:8089/secure/projectavatar?size=medium&avatarId=10324"
+          }
+       },
+       "fixVersions": [],
+       "aggregatetimespent": null,
+       "resolution": null,
+       "timetracking": {},
+       "attachment": [],
+       "aggregatetimeestimate": null,
+       "resolutiondate": null,
+       "workratio": -1,
+       "summary": "Mr Test",
+       "lastViewed": null,
+       "watches":       {
+          "self": "http://localhost:8089/rest/api/2/issue/CUC-2/watchers",
+          "watchCount": 1,
+          "isWatching": false
+       },
+       "creator":       {
+          "self": "http://localhost:8089/rest/api/2/user?username=chattersley",
+          "name": "chattersley",
+          "key": "chattersley",
+          "emailAddress": "craig_hattersley@hotmail.com",
+          "avatarUrls":          {
+             "48x48": "https://www.gravatar.com/avatar/eedc5ec36466a9d95839515b58a45b01?d=mm&s=48",
+             "24x24": "https://www.gravatar.com/avatar/eedc5ec36466a9d95839515b58a45b01?d=mm&s=24",
+             "16x16": "https://www.gravatar.com/avatar/eedc5ec36466a9d95839515b58a45b01?d=mm&s=16",
+             "32x32": "https://www.gravatar.com/avatar/eedc5ec36466a9d95839515b58a45b01?d=mm&s=32"
+          },
+          "displayName": "Craig Hattersley",
+          "active": true,
+          "timeZone": "Europe/London"
+       },
+       "subtasks": [],
+       "created": "2018-06-21T17:51:33.000+0100",
+       "reporter":       {
+          "self": "http://localhost:8089/rest/api/2/user?username=chattersley",
+          "name": "chattersley",
+          "key": "chattersley",
+          "emailAddress": "craig_hattersley@hotmail.com",
+          "avatarUrls":          {
+             "48x48": "https://www.gravatar.com/avatar/eedc5ec36466a9d95839515b58a45b01?d=mm&s=48",
+             "24x24": "https://www.gravatar.com/avatar/eedc5ec36466a9d95839515b58a45b01?d=mm&s=24",
+             "16x16": "https://www.gravatar.com/avatar/eedc5ec36466a9d95839515b58a45b01?d=mm&s=16",
+             "32x32": "https://www.gravatar.com/avatar/eedc5ec36466a9d95839515b58a45b01?d=mm&s=32"
+          },
+          "displayName": "Craig Hattersley",
+          "active": true,
+          "timeZone": "Europe/London"
+       },
+       "customfield_10000": "{summaryBean=com.atlassian.jira.plugin.devstatus.rest.SummaryBean@36b70cb5[summary={pullrequest=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@15dd3c1c[overall=com.atlassian.jira.plugin.devstatus.summary.beans.PullRequestOverallBean@55a8e8be[stateCount=0,state=OPEN,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], build=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@52824151[overall=com.atlassian.jira.plugin.devstatus.summary.beans.BuildOverallBean@5cde2d10[failedBuildCount=0,successfulBuildCount=0,unknownBuildCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], review=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@209fc74b[overall=com.atlassian.jira.plugin.devstatus.summary.beans.ReviewsOverallBean@32e036fe[stateCount=0,state=<null>,dueDate=<null>,overDue=false,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], deployment-environment=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@72a8613a[overall=com.atlassian.jira.plugin.devstatus.summary.beans.DeploymentOverallBean@5fb374d2[topEnvironments=[],showProjects=false,successfulCount=0,count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], repository=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@1c855f0[overall=com.atlassian.jira.plugin.devstatus.summary.beans.CommitOverallBean@322cc4f1[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}], branch=com.atlassian.jira.plugin.devstatus.rest.SummaryItemBean@3bcc23f[overall=com.atlassian.jira.plugin.devstatus.summary.beans.BranchOverallBean@47ed237e[count=0,lastUpdated=<null>,lastUpdatedTimestamp=<null>],byInstanceType={}]},errors=[],configErrors=[]], devSummaryJson={\"cachedValue\":{\"errors\":[],\"configErrors\":[],\"summary\":{\"pullrequest\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":\"OPEN\",\"open\":true},\"byInstanceType\":{}},\"build\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"failedBuildCount\":0,\"successfulBuildCount\":0,\"unknownBuildCount\":0},\"byInstanceType\":{}},\"review\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"stateCount\":0,\"state\":null,\"dueDate\":null,\"overDue\":false,\"completed\":false},\"byInstanceType\":{}},\"deployment-environment\":{\"overall\":{\"count\":0,\"lastUpdated\":null,\"topEnvironments\":[],\"showProjects\":false,\"successfulCount\":0},\"byInstanceType\":{}},\"repository\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}},\"branch\":{\"overall\":{\"count\":0,\"lastUpdated\":null},\"byInstanceType\":{}}}},\"isStale\":false}}",
+       "aggregateprogress":       {
+          "progress": 0,
+          "total": 0
+       },
+       "priority":       {
+          "self": "http://localhost:8089/rest/api/2/priority/3",
+          "iconUrl": "http://localhost:8089/images/icons/priorities/medium.svg",
+          "name": "Medium",
+          "id": "3"
+       },
+       "customfield_10100": "0|i00007:",
+       "customfield_10101": null,
+       "customfield_10200": null,
+       "customfield_10102": null,
+       "labels": [],
+       "environment": null,
+       "timeestimate": null,
+       "aggregatetimeoriginalestimate": null,
+       "versions": [],
+       "duedate": null,
+       "progress":       {
+          "progress": 0,
+          "total": 0
+       },
+       "comment":       {
+          "comments": [],
+          "maxResults": 0,
+          "total": 0,
+          "startAt": 0
+       },
+       "issuelinks": [],
+       "votes":       {
+          "self": "http://localhost:8089/rest/api/2/issue/CUC-2/votes",
+          "votes": 0,
+          "hasVoted": false
+       },
+       "worklog":       {
+          "startAt": 0,
+          "maxResults": 20,
+          "total": 0,
+          "worklogs": []
+       },
+       "assignee": null,
+       "updated": "2018-06-21T17:51:33.000+0100",
+       "status":       {
+          "self": "http://localhost:8089/rest/api/2/status/10000",
+          "description": "",
+          "iconUrl": "http://localhost:8089/",
+          "name": "To Do",
+          "id": "10000",
+          "statusCategory":          {
+             "self": "http://localhost:8089/rest/api/2/statuscategory/2",
+             "id": 2,
+             "key": "new",
+             "colorName": "blue-gray",
+             "name": "To Do"
+          }
+       }
+    }
+ }

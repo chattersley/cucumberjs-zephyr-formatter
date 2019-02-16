@@ -1,0 +1,113 @@
+{
+    "expand": "description,lead,url,projectKeys",
+    "self": "http://localhost:8089/rest/api/latest/project/10000",
+    "id": "10000",
+    "key": "CUC",
+    "description": "",
+    "lead":    {
+       "self": "http://localhost:8089/rest/api/2/user?username=chattersley",
+       "key": "chattersley",
+       "name": "chattersley",
+       "avatarUrls":       {
+          "48x48": "https://www.gravatar.com/avatar/eedc5ec36466a9d95839515b58a45b01?d=mm&s=48",
+          "24x24": "https://www.gravatar.com/avatar/eedc5ec36466a9d95839515b58a45b01?d=mm&s=24",
+          "16x16": "https://www.gravatar.com/avatar/eedc5ec36466a9d95839515b58a45b01?d=mm&s=16",
+          "32x32": "https://www.gravatar.com/avatar/eedc5ec36466a9d95839515b58a45b01?d=mm&s=32"
+       },
+       "displayName": "Craig Hattersley",
+       "active": true
+    },
+    "components": [],
+    "issueTypes":    [
+             {
+          "self": "http://localhost:8089/rest/api/latest/issuetype/10002",
+          "id": "10002",
+          "description": "An improvement or enhancement to an existing feature or task.",
+          "iconUrl": "http://localhost:8089/secure/viewavatar?size=xsmall&avatarId=10310&avatarType=issuetype",
+          "name": "Improvement",
+          "subtask": false,
+          "avatarId": 10310
+       },
+             {
+          "self": "http://localhost:8089/rest/api/latest/issuetype/10003",
+          "id": "10003",
+          "description": "A task that needs to be done.",
+          "iconUrl": "http://localhost:8089/secure/viewavatar?size=xsmall&avatarId=10318&avatarType=issuetype",
+          "name": "Task",
+          "subtask": false,
+          "avatarId": 10318
+       },
+             {
+          "self": "http://localhost:8089/rest/api/latest/issuetype/10004",
+          "id": "10004",
+          "description": "The sub-task of the issue",
+          "iconUrl": "http://localhost:8089/secure/viewavatar?size=xsmall&avatarId=10316&avatarType=issuetype",
+          "name": "Sub-task",
+          "subtask": true,
+          "avatarId": 10316
+       },
+             {
+          "self": "http://localhost:8089/rest/api/latest/issuetype/10005",
+          "id": "10005",
+          "description": "A new feature of the product, which has yet to be developed.",
+          "iconUrl": "http://localhost:8089/secure/viewavatar?size=xsmall&avatarId=10311&avatarType=issuetype",
+          "name": "New Feature",
+          "subtask": false,
+          "avatarId": 10311
+       },
+             {
+          "self": "http://localhost:8089/rest/api/latest/issuetype/10006",
+          "id": "10006",
+          "description": "A problem which impairs or prevents the functions of the product.",
+          "iconUrl": "http://localhost:8089/secure/viewavatar?size=xsmall&avatarId=10303&avatarType=issuetype",
+          "name": "Bug",
+          "subtask": false,
+          "avatarId": 10303
+       },
+             {
+          "self": "http://localhost:8089/rest/api/latest/issuetype/10000",
+          "id": "10000",
+          "description": "Created by JIRA Software - do not edit or delete. Issue type for a big user story that needs to be broken down.",
+          "iconUrl": "http://localhost:8089/images/icons/issuetypes/epic.svg",
+          "name": "Epic",
+          "subtask": false
+       },
+             {
+          "self": "http://localhost:8089/rest/api/latest/issuetype/10100",
+          "id": "10100",
+          "description": "This Issue Type is used to create Zephyr Test within Jira.",
+          "iconUrl": "http://localhost:8089/download/resources/com.thed.zephyr.je/images/icons/ico_zephyr_issuetype.png",
+          "name": "Test",
+          "subtask": false
+       },
+             {
+          "self": "http://localhost:8089/rest/api/latest/issuetype/10001",
+          "id": "10001",
+          "description": "Created by JIRA Software - do not edit or delete. Issue type for a user story.",
+          "iconUrl": "http://localhost:8089/images/icons/issuetypes/story.svg",
+          "name": "Story",
+          "subtask": false
+       }
+    ],
+    "assigneeType": "UNASSIGNED",
+    "versions": [   {
+       "self": "http://localhost:8089/rest/api/latest/version/10000",
+       "id": "10000",
+       "name": "1.0.0",
+       "archived": false,
+       "released": false,
+       "startDate": "2018-06-21",
+       "userStartDate": "21/Jun/18",
+       "projectId": 10000
+    }],
+    "name": "Cucumber",
+    "roles": {"Administrators": "http://localhost:8089/rest/api/latest/project/10000/role/10002"},
+    "avatarUrls":    {
+       "48x48": "http://localhost:8089/secure/projectavatar?avatarId=10324",
+       "24x24": "http://localhost:8089/secure/projectavatar?size=small&avatarId=10324",
+       "16x16": "http://localhost:8089/secure/projectavatar?size=xsmall&avatarId=10324",
+       "32x32": "http://localhost:8089/secure/projectavatar?size=medium&avatarId=10324"
+    },
+    "projectTypeKey": "software",
+    "archived": false
+ }

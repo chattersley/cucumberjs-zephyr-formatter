@@ -1,0 +1,127 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "As a user, i want to divide two numbers",
+    "line": 1,
+    "id": "as-a-user,-i-want-to-divide-two-numbers",
+    "tags": [],
+    "uri": "__component_tests__\\features\\divide.feature",
+    "elements": [
+      {
+        "id": "as-a-user,-i-want-to-divide-two-numbers;divide-two-numbers",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Divide two numbers",
+        "tags": [
+          {
+            "name": "@CUC-1",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "result": {
+          "duration": 4,
+          "status": "passed"
+        },
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "a calculator",
+            "match": {
+              "location": "__component_tests__\\steps\\divideSteps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I divide 6 by 2",
+            "match": {
+              "location": "__component_tests__\\steps\\divideSteps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "the result is 3",
+            "match": {
+              "location": "__component_tests__\\steps\\divideSteps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "as-a-user,-i-want-to-divide-two-numbers;divide-by-zero",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Divide by zero",
+        "tags": [
+          {
+            "name": "@CUC-2",
+            "line": 9
+          }
+        ],
+        "type": "scenario",
+        "result": {
+          "duration": 2,
+          "status": "passed"
+        },
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "a calculator",
+            "match": {
+              "location": "__component_tests__\\steps\\divideSteps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I divide 6 by 0",
+            "match": {
+              "location": "__component_tests__\\steps\\divideSteps.ts:9"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "an error occurred with the following message \"Impossible to divide by 0\"",
+            "match": {
+              "location": "__component_tests__\\steps\\divideSteps.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
