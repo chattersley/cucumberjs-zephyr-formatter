@@ -4,7 +4,10 @@ node_js:
   - "7"
 cache:
   directories:
-  - "$HOME/.npm"
+    - "$HOME/.npm"
+
+script:
+  - npm run build
 
 jobs:
   include:
