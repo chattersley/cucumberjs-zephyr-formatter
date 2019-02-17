@@ -22,5 +22,5 @@ reporter_prefix=
 reporter_execution= (default -1)
 reporter_cycle= (default 'Ad hoc'),
 reporter_version= (default 'Unscheduled'),
-reporter_development_version
+reporter_development_version=
 ```
