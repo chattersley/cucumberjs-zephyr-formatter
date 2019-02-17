@@ -7,7 +7,7 @@ import { projectIntegrationMapper } from "../../src/integration-mapper";
 import { findProjectByIdOrKey } from "../../src/integration/JiraIntegrationService";
 
 jest.mock("jira-client");
-jest.mock("../../src/integration-mapper/ProjectIntegrationMapper");
+jest.mock("../../src/integration-mapper");
 
 const PROJECT_KEY: string = "CUC";
 
