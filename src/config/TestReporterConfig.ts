@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-import { Version, Cycle } from "../domain";
+import { Cycle, Version } from "../domain";
 
 dotenv.config();
 
@@ -14,7 +14,7 @@ export const config: TestReporterConfig = {
   port:
     process.env.REPORTER_PORT === undefined
       ? 0
-      : Number.parseInt(process.env.REPORTER_PORT),
+      : Number.parseInt(process.env.REPORTER_PORT, 10),
   projectPrefix: process.env.REPORTER_PREFIX || "",
   execution: process.env.REPORTER_EXECUTION || "-1",
   cycle: process.env.REPORTER_CYCLE || Cycle.ADHOC_CYCLE_NAME,
@@ -42,7 +42,7 @@ export interface TestReporterConfig {
   /** Protocol */
   readonly protocol: "http" | "https";
 
-  /**Hostname */
+  /** Hostname */
   readonly host: string;
 
   /** Port */

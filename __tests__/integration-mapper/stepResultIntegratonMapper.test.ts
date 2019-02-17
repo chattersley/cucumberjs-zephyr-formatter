@@ -1,8 +1,8 @@
+import { StepResult, StepResultStatus } from "../../src/domain";
 import {
   stepResultIntegrationMapper,
   stepResultsIntegrationMapper
 } from "../../src/integration-mapper";
-import { StepResult, StepResultStatus } from "../../src/domain";
 
 describe("Check mapping of step results", () => {
   test("Single step result", () => {

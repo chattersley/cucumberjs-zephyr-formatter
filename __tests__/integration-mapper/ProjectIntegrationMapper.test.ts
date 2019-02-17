@@ -1,8 +1,8 @@
 import * as fs from 'fs';
-import * as path from 'path';
-import { projectIntegrationMapper } from '../../src/integration-mapper/ProjectIntegrationMapper';
 import JiraApi from 'jira-client';
+import * as path from 'path';
 import Project from '../../src/domain/Project';
+import { projectIntegrationMapper } from '../../src/integration-mapper/ProjectIntegrationMapper';
 
 test('Check a full mapping from project JSON to domain model', () => {
     // Project setup

@@ -1,8 +1,8 @@
-import {
-  mapToExecutionStatus,
-  mapFromExecutionStatus
-} from "../../src/integration-mapper";
 import { ExecutionStatus } from "../../src/domain";
+import {
+  mapFromExecutionStatus,
+  mapToExecutionStatus
+} from "../../src/integration-mapper";
 
 describe("Check mapping of execution status", () => {
   test("to passed status", () => {

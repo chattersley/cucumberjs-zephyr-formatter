@@ -191,10 +191,12 @@ export class VersionBuilder {
    * @returns Builder.
    */
   public startDate(startDate: Date): VersionBuilder {
+    // tslint:disable-next-line: prefer-conditional-expression
     if (typeof startDate === "string" || startDate instanceof String) {
-      startDate = new Date(startDate);
+      this.json.startDate = new Date(startDate);
+    } else {
+      this.json.startDate = startDate;
     }
-    this.json.startDate = startDate;
     return this;
   }
 
@@ -204,10 +206,12 @@ export class VersionBuilder {
    * @returns Builder.
    */
   public releaseDate(releaseDate: Date): VersionBuilder {
+    // tslint:disable-next-line: prefer-conditional-expression
     if (typeof releaseDate === "string" || releaseDate instanceof String) {
-      releaseDate = new Date(releaseDate);
+      this.json.releaseDate = new Date(releaseDate);
+    } else {
+      this.json.releaseDate = releaseDate;
     }
-    this.json.releaseDate = releaseDate;
     return this;
   }
 

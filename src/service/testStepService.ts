@@ -1,10 +1,10 @@
-import {
-  findTestStepsByIssueId,
-  updateTestStep,
-  createTestStep,
-  deleteTestStep
-} from "../integration/ZapiIntegrationService";
 import { Issue, TestStep } from "../domain";
+import {
+  createTestStep,
+  deleteTestStep,
+  findTestStepsByIssueId,
+  updateTestStep
+} from "../integration/ZapiIntegrationService";
 
 /**
  * Find test steps, this add, updates and deletes from JIRA as necessary.
@@ -39,7 +39,7 @@ async function deleteAdditionalTestSteps(
   issueId: number,
   numberSteps: number,
   testSteps: TestStep[]
-) {
+): Promise<void> {
   for (let stepIndex = numberSteps; stepIndex < testSteps.length; stepIndex++) {
     await deleteTestStep(issueId, testSteps[stepIndex].testStepId);
   }
@@ -55,7 +55,7 @@ async function updateTestSteps(
   issue: Issue,
   testSteps: TestStep[],
   scenario: any
-) {
+): Promise<void> {
   for (let stepIndex = 0; stepIndex < scenario.steps.length; stepIndex++) {
     let testStep: TestStep | null = null;
     let testStepState: TestStepState = TestStepState.create;
@@ -68,6 +68,7 @@ async function updateTestSteps(
         if (inspectedTestStep.orderId === stepIndex + 1) {
           testStep = inspectedTestStep;
 
+          // tslint:disable-next-line: prefer-conditional-expression
           if (
             inspectedTestStep.step ===
             `${reportedStep.keyword}${reportedStep.name}`

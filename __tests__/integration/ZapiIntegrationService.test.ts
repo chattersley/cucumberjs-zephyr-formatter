@@ -1,8 +1,8 @@
 import axios from "axios";
-import { factory } from "../config/ConfigLog4j";
-import { findTestStepsByIssueId } from "../../src/integration/ZapiIntegrationService";
-import { testStepsIntegrationMapper } from "../../src/integration-mapper";
 import TestStep from "../../src/domain/TestStep";
+import { testStepsIntegrationMapper } from "../../src/integration-mapper";
+import { findTestStepsByIssueId } from "../../src/integration/ZapiIntegrationService";
+import { factory } from "../config/ConfigLog4j";
 
 jest.mock("axios");
 jest.mock("../../src/integration-mapper");
@@ -12,12 +12,8 @@ beforeEach(() => {
   (testStepsIntegrationMapper as jest.Mock).mockClear();
 });
 
-const log = factory.getLogger("test.integration.ZapiIntegrationService");
-
 test("Should", async () => {
-  log.debug("here");
-
-  let testStep = TestStep.builder()
+  const testStep = TestStep.builder()
     .data("Some data")
     .orderId(2)
     .testStepId(87)
@@ -25,14 +21,14 @@ test("Should", async () => {
     .result("pass")
     .build();
 
-  let expectedTestSteps: TestStep[] = [testStep];
+  const expectedTestSteps: TestStep[] = [testStep];
 
   // Mocks
   (axios.get as any).mockResolvedValue({ status: 200, data: "message" });
   (testStepsIntegrationMapper as any).mockReturnValueOnce(expectedTestSteps);
 
   // Run test
-  let testStepsFound = await findTestStepsByIssueId(10201);
+  const testStepsFound = await findTestStepsByIssueId(10201);
 
   // Asserts
   expect(testStepsFound).toEqual(expectedTestSteps);

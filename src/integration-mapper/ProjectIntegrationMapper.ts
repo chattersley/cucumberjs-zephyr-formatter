@@ -1,7 +1,7 @@
 import JiraApi from "jira-client";
+import { logFactory } from "../config";
 import Project from "../domain/Project";
 import Version from "../domain/Version";
-import { logFactory } from "../config";
 
 /** Logger */
 const log = logFactory.getLogger(

@@ -1,5 +1,5 @@
-import { StepResult, StepResultBuilder, TestStepBuilder } from "../domain";
 import { logFactory } from "../config";
+import { StepResult, StepResultBuilder, TestStepBuilder } from "../domain";
 import { mapToStepResultStatus } from "./StepResultStatusMapper";
 
 /** Logger */

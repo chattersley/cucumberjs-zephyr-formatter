@@ -1,20 +1,20 @@
 import { Formatter } from "cucumber";
 import { config, logFactory } from "../config";
+import { StepResultStatus } from "../domain";
 import { readFile } from "../helpers/fileIntegration";
 import {
   findIssueByKey,
   findProjectByIdOrKey
 } from "../integration/JiraIntegrationService";
-import JsonFormatter from "./JsonFormatter";
-import { findAndUpdateTestStepsForScenario } from "../service/testStepService";
-import { StepResultStatus } from "../domain";
 import { findCycle } from "../service/cycleService";
-import { reportStepResult, saveStepResult } from "../service/stepResultService";
 import {
   findExecution,
   saveExecutionStatus
 } from "../service/executionService";
+import { reportStepResult, saveStepResult } from "../service/stepResultService";
+import { findAndUpdateTestStepsForScenario } from "../service/testStepService";
 import { findVersion } from "../service/versionService";
+import JsonFormatter from "./JsonFormatter";
 
 /** Logger */
 const log = logFactory.getLogger("testReporter.formatter.JiraTestReporter");
@@ -99,7 +99,7 @@ export default class JiraTestReporter extends Formatter {
                       log.trace(
                         () => `Execution found is: ${JSON.stringify(execution)}`
                       );
-                      let stepResultStatuses: StepResultStatus[] = [];
+                      const stepResultStatuses: StepResultStatus[] = [];
 
                       for (const testStep of testSteps) {
                         for (const stepResult of execution.stepResults) {
