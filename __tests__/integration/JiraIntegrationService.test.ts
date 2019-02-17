@@ -3,11 +3,11 @@ import "jest";
 import Project from "../../src/domain/Project";
 
 import JiraApi from "jira-client";
-import { projectIntegrationMapper } from "../../src/integration-mapper/ProjectIntegrationMapper";
+import { projectIntegrationMapper } from "../../src/integration-mapper";
 import { findProjectByIdOrKey } from "../../src/integration/JiraIntegrationService";
 
 jest.mock("jira-client");
-jest.mock("../../src/integration-mapper/ProjectIntegrationMapper");
+jest.mock("../../src/integration-mapper");
 
 const PROJECT_KEY: string = "CUC";
 
