@@ -1,6 +1,6 @@
 import { logFactory } from "../config";
 import { StepResult, StepResultBuilder, TestStepBuilder } from "../domain";
-import { mapToStepResultStatus } from "./StepResultStatusMapper";
+import { mapToStepResultStatus } from "./";
 
 /** Logger */
 const log = logFactory.getLogger(

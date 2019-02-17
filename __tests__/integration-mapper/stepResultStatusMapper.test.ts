@@ -4,7 +4,7 @@ import { StepResultStatus } from "../../src/domain/StepResultStatus";
 import {
   mapFromStepResultStatus,
   mapToStepResultStatus
-} from "../../src/integration-mapper/StepResultStatusMapper";
+} from "../../src/integration-mapper";
 
 test("Check mapping to the domain status", () => {
   // Asserts
