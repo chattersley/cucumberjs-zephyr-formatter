@@ -1,12 +1,4 @@
 import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
-import {
-  cyclesIntegrationMapper,
-  mapFromExecutionStatus,
-  mapFromStepResultStatus,
-  stepResultsIntegrationMapper,
-  testStepsIntegrationMapper,
-  testStepIntegrationMapper
-} from "../integration-mapper";
 import * as HttpStatus from "http-status-codes";
 import {
   buildBaseUrl,
@@ -17,15 +9,23 @@ import {
   Cycle,
   CycleBuilder,
   Execution,
+  ExecutionBuilder,
+  ExecutionStatus,
   Issue,
   Project,
   StepResult,
   StepResultStatus,
   TestStep,
-  Version,
-  ExecutionBuilder,
-  ExecutionStatus
+  Version
 } from "../domain";
+import {
+  cyclesIntegrationMapper,
+  mapFromExecutionStatus,
+  mapFromStepResultStatus,
+  stepResultsIntegrationMapper,
+  testStepIntegrationMapper,
+  testStepsIntegrationMapper
+} from "../integration-mapper";
 
 /** Logger */
 const log = logFactory.getLogger(

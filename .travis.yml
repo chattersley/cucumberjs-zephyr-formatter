@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - "8"
+  - "7"
+cache:
+  directories:
+  - "$HOME/.npm"
+
+jobs:
+  include:
+    - stage: npm release
+      node_js: "8"
+      if: branch = master
+      script: npm run release
+      deploy:
+        provider: npm
+        api_key: $NPM_TOKEN
+        email: $NPM_EMAIL
+        on: deploy-npm-release

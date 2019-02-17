@@ -1,5 +1,5 @@
-import { Cycle, CycleBuilder } from "../domain";
 import { logFactory } from "../config";
+import { Cycle, CycleBuilder } from "../domain";
 
 /** Logger */
 const log = logFactory.getLogger(
@@ -42,7 +42,10 @@ export function cyclesIntegrationMapper(cyclesZapi: any): Cycle[] {
   Object.keys(cyclesZapi).forEach(cycleId => {
     if (cycleId !== "recordsCount") {
       const cycleInfo = cyclesZapi[cycleId];
-      const cycle = cycleIntegrationMapper(Number.parseInt(cycleId), cycleInfo);
+      const cycle = cycleIntegrationMapper(
+        Number.parseInt(cycleId, 10),
+        cycleInfo
+      );
       if (cycle !== null) {
         cycles.push(cycle);
       }

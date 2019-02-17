@@ -1,8 +1,8 @@
+import { Cycle } from "../../src/domain";
 import {
   cycleIntegrationMapper,
   cyclesIntegrationMapper
 } from "../../src/integration-mapper";
-import { Cycle } from "../../src/domain";
 
 describe("Check mapping of cycles", () => {
   test("Single cycle", () => {

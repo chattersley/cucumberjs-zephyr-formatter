@@ -1,18 +1,18 @@
+import { logFactory } from "../config";
 import {
+  Cycle,
   Execution,
   ExecutionStatus,
-  Project,
-  Version,
-  Cycle,
   Issue,
-  StepResultStatus
+  Project,
+  StepResultStatus,
+  Version
 } from "../domain";
 import {
   createNewExecution,
-  findStepResults
+  findStepResults,
+  updateExecution
 } from "../integration/ZapiIntegrationService";
-import { logFactory } from "../config";
-import { updateExecution } from "../integration/ZapiIntegrationService";
 
 /** Logger */
 const log = logFactory.getLogger("testReporter.service.executionService");
@@ -56,7 +56,7 @@ export async function findExecution(
 export async function saveExecutionStatus(
   stepResultStatuses: StepResultStatus[],
   execution: Execution
-) {
+): Promise<void> {
   let executionStatus = ExecutionStatus.PASSED;
 
   stepResultStatuses.forEach(stepResultStatus => {

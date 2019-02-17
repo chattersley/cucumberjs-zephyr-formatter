@@ -1,5 +1,5 @@
-import { TestStep } from "../domain";
 import { logFactory } from "../config";
+import { TestStep } from "../domain";
 
 /** Logger */
 const log = logFactory.getLogger(

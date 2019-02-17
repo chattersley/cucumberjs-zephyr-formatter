@@ -1,11 +1,11 @@
+import getProjectVersion from "get-project-version";
+import name from "project-name";
 import { config, logFactory } from "../config";
 import { Cycle, CycleBuilder, Project, Version } from "../domain";
 import {
   createCycle,
   findCycleForProjectAndVersion
 } from "../integration/ZapiIntegrationService";
-import getProjectVersion from "get-project-version";
-import name from "project-name";
 
 /** Logger. */
 const log = logFactory.getLogger("testReporter.service.stepResultService");
@@ -21,7 +21,7 @@ export async function findCycle(
 ): Promise<Cycle> {
   log.trace(() => `Finding the cycle`);
 
-  let cycleName = config.cycle;
+  const cycleName = config.cycle;
   let cycleToReturn: Cycle | null = null;
 
   if (

@@ -37,31 +37,6 @@ export default class JsonFormatter extends Formatter {
     // options.eventBroadcaster.on("test-run-finished", this.onTestRunFinished);
   }
 
-  private convertNameToId(obj: any): string {
-    return obj.name.replace(/ /g, "-").toLowerCase();
-  }
-
-  private formatDataTable(dataTable: any): any {
-    return {
-      rows: dataTable.rows.map(row => ({ cells: _.map(row.cells, "value") }))
-    };
-  }
-
-  private formatDocString(docString: any): any {
-    return {
-      content: docString.content,
-      line: docString.location.line
-    };
-  }
-
-  private formatStepArguments(stepArguments): any {
-    const iterator = buildStepArgumentIterator({
-      dataTable: this.formatDataTable.bind(this),
-      docString: this.formatDocString.bind(this)
-    });
-    return _.map(stepArguments, iterator);
-  }
-
   /**
    * Co-ordination function that creates the JSON payload.
    */
@@ -113,6 +88,31 @@ export default class JsonFormatter extends Formatter {
     // Write to build file
     fs.writeFileSync("build/report.json", JSON.stringify(features, null, 2));
   };
+
+  private convertNameToId(obj: any): string {
+    return obj.name.replace(/ /g, "-").toLowerCase();
+  }
+
+  private formatDataTable(dataTable: any): any {
+    return {
+      rows: dataTable.rows.map(row => ({ cells: _.map(row.cells, "value") }))
+    };
+  }
+
+  private formatDocString(docString: any): any {
+    return {
+      content: docString.content,
+      line: docString.location.line
+    };
+  }
+
+  private formatStepArguments(stepArguments): any {
+    const iterator = buildStepArgumentIterator({
+      dataTable: this.formatDataTable.bind(this),
+      docString: this.formatDocString.bind(this)
+    });
+    return _.map(stepArguments, iterator);
+  }
 
   private getFeatureData(feature: any, uri: string): any {
     return {

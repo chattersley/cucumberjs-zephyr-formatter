@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import * as path from "path";
-import { testStepsIntegrationMapper } from "../../src/integration-mapper/testStepIntegrationMapper";
 import TestStep from "../../src/domain/TestStep";
+import { testStepsIntegrationMapper } from "../../src/integration-mapper/testStepIntegrationMapper";
 
 test("Check a full mapping from issue JSON to domain model", () => {
   // Setup

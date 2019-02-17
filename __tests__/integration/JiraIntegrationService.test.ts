@@ -40,7 +40,7 @@ test("Should find project by key", async () => {
     Project
   >).mockReturnValueOnce(expectedProject);
 
-  //Run test
+  // Run test
   const project = await findProjectByIdOrKey(PROJECT_KEY);
 
   // Asserts
