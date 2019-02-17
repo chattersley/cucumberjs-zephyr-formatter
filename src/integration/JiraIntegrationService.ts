@@ -2,8 +2,10 @@ import JiraApi from "jira-client";
 import { config, logFactory } from "../config";
 import Issue from "../domain/Issue";
 import Project from "../domain/Project";
-import { issueIntegrationMapper } from "../integration-mapper/IssueIntegrationMapper";
-import { projectIntegrationMapper } from "../integration-mapper/ProjectIntegrationMapper";
+import {
+  issueIntegrationMapper,
+  projectIntegrationMapper
+} from "../integration-mapper";
 
 const log = logFactory.getLogger(
   "testReporter.integration.JiraIntegrationService"
