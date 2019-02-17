@@ -2,7 +2,6 @@ import axios from "axios";
 import TestStep from "../../src/domain/TestStep";
 import { testStepsIntegrationMapper } from "../../src/integration-mapper";
 import { findTestStepsByIssueId } from "../../src/integration/ZapiIntegrationService";
-import { factory } from "../config/ConfigLog4j";
 
 jest.mock("axios");
 jest.mock("../../src/integration-mapper");
