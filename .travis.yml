@@ -15,15 +15,17 @@ jobs:
     - stage: release
       node_js: "8"
       if: branch = master
+      script: npm run release
+      after_script:
+        - cat /home/travis/.npm/_logs/*
       # Advanced: optionally overwrite your default `script` step to skip the tests
       # script: skip
       deploy:
-        provider: script
+        provider: npm
         api_key: $NPM_TOKEN
         email: $NPM_EMAIL
+        on: deploy-npm-release
         skip_cleanup: true
-        script:
-          - npm run release
 
 after_failure:
   - cat /home/travis/.npm/_logs/*
