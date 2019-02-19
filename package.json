@@ -1,5 +1,5 @@
 {
-  "name": "test-reporter",
+  "name": "cucumberjs-zephyr-formatter",
   "version": "0.0.0-development",
   "description": "Interacts with ZAPI and JIRA API to report on Zephyr test status",
   "main": "build/main/index.js",
