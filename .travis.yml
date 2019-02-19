@@ -11,12 +11,16 @@ script:
 
 jobs:
   include:
-    - stage: npm release
-      node_js: "8"
+    # Define the release stage that runs semantic-release
+    - stage: release
+      node_js: lts/*
       if: branch = master
-      script: npm run release
+      # Advanced: optionally overwrite your default `script` step to skip the tests
+      # script: skip
       deploy:
-        provider: npm
+        provider: script
         api_key: $NPM_TOKEN
         email: $NPM_EMAIL
-        on: deploy-npm-release
+        skip_cleanup: true
+        script:
+          - npm run release
