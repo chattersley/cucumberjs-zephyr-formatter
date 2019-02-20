@@ -23,6 +23,7 @@ jobs:
         provider: npm
         api_key: $NPM_TOKEN
         email: $NPM_EMAIL
+        github-token: $GITHUB_TOKEN
         on: deploy-npm-release
         skip_cleanup: true
 
