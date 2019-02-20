@@ -35,7 +35,7 @@
     "prepare-release": "run-s all version doc:publish",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "release": "run-s build version",
-    "version": "semantic-release --allow-same-version"
+    "version": "semantic-release --allow-same-version",
   },
   "scripts-info": {
     "info": "Display information about the package scripts",
