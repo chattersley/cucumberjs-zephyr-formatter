@@ -13,7 +13,7 @@ jobs:
     - stage: release
       node_js: 9
       script:
-        - npm run version
+        - npm run release
       on:
         tags: true
       skip_cleanup: true
