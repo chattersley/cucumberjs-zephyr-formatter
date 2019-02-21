@@ -1,9 +1,8 @@
 language: node_js
-node_js:
-  - "stable"
 
-install:
-  - npm install
+node_js:
+  - 8
+  - 6
 
 script:
   - npm run build
@@ -11,12 +10,12 @@ script:
 jobs:
   include:
     - stage: release
-      node_js: 9
-      script:
-        - npm run build
-        - npx semantic-release
-      if: branch = master
-      skip_cleanup: true
+      deploy:
+        provider: script
+        if: branch = master
+        skip_cleanup: true
+        script:
+          - npm release
 
 after_failure:
   - cat /home/travis/.npm/_logs/*
