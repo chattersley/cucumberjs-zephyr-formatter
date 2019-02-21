@@ -14,8 +14,7 @@ jobs:
       node_js: 9
       script:
         - npm run release
-      on:
-        tags: true
+      if: branch = master
       skip_cleanup: true
 
 after_failure:
