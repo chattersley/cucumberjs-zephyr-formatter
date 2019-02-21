@@ -13,7 +13,8 @@ jobs:
     - stage: release
       node_js: 9
       script:
-        - npm run release
+        - npm run build
+        - npx semantic-release
       if: branch = master
       skip_cleanup: true
 
