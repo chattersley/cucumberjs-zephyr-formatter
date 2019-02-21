@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "stable"
+  - "latest"
 cache:
   directories:
     - "$HOME/.npm"
@@ -10,11 +10,8 @@ script:
 
 jobs:
   include:
-    # Define the release stage that runs semantic-release
     - stage: release
-      node_js: "10"
-      after_script:
-        - cat /home/travis/.npm/_logs/*
+      node_js: lts/*
       script:
         - npm run version
       on:
