@@ -10,9 +10,9 @@ script:
 jobs:
   include:
     - stage: release
+      if: branch = master
       deploy:
         provider: script
-        if: branch = master
         skip_cleanup: true
         script:
           - npm release
