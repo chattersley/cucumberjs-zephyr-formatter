@@ -1,12 +1,9 @@
 language: node_js
 node_js:
-  - "latest"
-cache:
-  directories:
-    - "$HOME/.npm"
+  - "stable"
 
 install:
-  - npm ci
+  - npm install
 
 script:
   - npm run build
